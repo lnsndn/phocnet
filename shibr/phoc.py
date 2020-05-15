@@ -165,6 +165,9 @@ def get_n_grams(word, len_ngram):
     return [word[i:i + len_ngram]for i in range(len(word) - len_ngram + 1)]
 
 
-phocs = build_phoc_descriptor(['erik'], '0123456789abcdefghijklmnopqrstuvwxyz', [2,3,4,5])
+phocs = build_phoc_descriptor(['svens'], '0123456789abcdefghijklmnopqrstuvwxyz', [2,3,4,5])
 print(phocs)
 print("Length: " + str(len(phocs[0])))
+for i in range(len(phocs[0])):
+    if phocs[0][i] == 1:
+        print(i)
