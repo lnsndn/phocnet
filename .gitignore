@@ -94,3 +94,8 @@ ENV/
 
 #Binary Proto Files
 *.binaryproto
+
+# macOS files
+.DS_Store
+
+shibr/patches/*
