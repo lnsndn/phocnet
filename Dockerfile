@@ -2,7 +2,7 @@ FROM ubuntu:bionic-20200403
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
 
-RUN apt install -y git wget cmake software-properties-common libprotobuf-dev libleveldb-dev liblmdb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev
+RUN apt install -y git wget nano cmake software-properties-common libprotobuf-dev libleveldb-dev liblmdb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev
 RUN apt install -y --no-install-recommends libboost-all-dev
 
 RUN apt install -y python-pip

@@ -165,7 +165,7 @@ def get_n_grams(word, len_ngram):
     return [word[i:i + len_ngram]for i in range(len(word) - len_ngram + 1)]
 
 
-word = 'anna'
+word = 'from'
 phocs = build_phoc_descriptor([word], '0123456789abcdefghijklmnopqrstuvwxyz', [2,3,4,5])
 np.save('phocs/' + word + ".npy", phocs)
 print(phocs.sum())

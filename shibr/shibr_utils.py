@@ -1,6 +1,8 @@
 import os
 import pprint
+import sys
 
+import cv2
 import numpy as np
 from PIL import Image
 
@@ -46,4 +48,12 @@ def produce_patches():
             im2 = image.crop((left, top, right, bottom))
             im2.save(os.path.join(output_dir, str(x) + "_" + str(y) + ".jpg"), "JPEG")
     
-produce_patches()
+
+def transform_image(filename):
+    image1 = cv2.imread(filename) 
+    img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+    ret, thresh = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    Image.fromarray(thresh).save('transformed/output.png', 'PNG')
+
+# transform_image('/Users/lena/Downloads/SHIBR_6GB/eval/images/92808/v92808.b120.s233.jpg')
+transform_image('/Users/lena/Desktop/carl.png')

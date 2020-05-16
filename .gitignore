@@ -100,3 +100,4 @@ ENV/
 
 shibr/patches/*
 shibr/phocs/*
+shibr/transformed/*
